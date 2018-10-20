@@ -1,0 +1,116 @@
+//---------------------------------------
+// Components: Nav
+//---------------------------------------
+
+.nav {
+  box-shadow: 0px 2px 40px 0px rgba($color-black,.08);
+  position: fixed;
+  background-color: rgba(255,255,255,.98);
+  z-index: 9999;
+  padding: 0px 2.4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  &__body {
+    width: 100%;
+    display: flex;
+    height: $nav-height;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    height: $nav-height;
+    &:hover {
+      border-bottom-color: $color-primary;
+      background: transparentize($color-primary, .98);
+      color: $color-primary;
+    }
+    &:focus, &:active {
+      outline: 0;
+    }
+    &--alt {
+      color: $color-primary;
+    }
+  }
+}
+
+.logo {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: $color-gray-500;
+  text-decoration: none;
+  padding-bottom: 0;
+  &__icon {
+    $size: 3.6em;
+    width: $size;
+    height: $size;
+    display: inline-block;
+    margin-right: .8rem;
+    transition: all 150ms ease;
+    fill: currentColor;
+    color: $color-primary;
+  }
+  &__wordmark {
+    font-weight: 900;
+    font-size: 2.2em;
+    display: inline-block;
+  }
+}
+
+a.logo {
+  &:hover, &:focus {
+    color: $color-gray-600;
+    .logo__icon {
+      transform: scale(1.1) rotate(5deg);
+      color: darken($color-primary, 8%);
+      transition: all 150ms ease;
+    }
+  }
+}
+
+.nav-mobile {
+  &__button {
+    width: 36px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    cursor: pointer;
+    display: none;
+    &:hover, &:focus {
+      opacity: .75;
+    }
+  }
+  &__button-line {
+    height: 4px;
+    background: $color-gray-500;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav__menu {
+    display: none;
+  }
+  .nav-mobile {
+    &__button {
+      display: flex;
+    }
+  }
+}

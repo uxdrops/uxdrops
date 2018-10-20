@@ -1,0 +1,25 @@
+mixin bookCard(img, title, author)
+  li.list__item
+    a.list__link.card(href="#")
+      .card__body
+        img.card__img(src=img width="100")
+        .card__title= title
+        .card__text= "by " + author
+      .card__footer
+
+mixin card(img, title, author)
+  li.list__item
+    a.list__link.card(href="#")
+      .card__body
+        .card__hero(style="background-image:url(" + img + ")")
+      .card__body
+        .card__title= title
+        .card__text= "by " + author
+      .card__footer
+
+mixin suggestCard
+  li.list__item
+    a.list__link.card.u-t--white.u-bg--primary(href="#")
+      .card__body
+        .card__title + Suggest a new resource
+        .card__text If you have a resource that's not currently listed, let us know!

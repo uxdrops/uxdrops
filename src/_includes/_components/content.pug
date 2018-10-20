@@ -1,0 +1,31 @@
+include list-card
+.content
+  .container
+    .row
+      .col.col__12
+        h1 Curated UX Resources
+        h2.lead.u-t--gray-500 A collection of 
+          a(href="#") tools
+          | , 
+          a(href="#") articles
+          | , 
+          a(href="#") books
+          | , and 
+          a(href="#") resources
+          | &nbsp; we found useful.
+    .row
+      .col.col__12
+        h3.u-t--primary Books
+        ul.list
+          +bookCard('https://facebook.design/public/images/designing-new-ways-to-give-context-to-news-stories.png', 'Don\'t Make Me Think', 'Steve Krug')
+          +bookCard('https://facebook.design/public/images/designing-new-ways-to-give-context-to-news-stories.png', 'Don\'t Make Me Think', 'Steve Krug')
+          +bookCard('https://facebook.design/public/images/designing-new-ways-to-give-context-to-news-stories.png', 'Don\'t Make Me Think', 'Steve Krug')
+          +bookCard('https://facebook.design/public/images/designing-new-ways-to-give-context-to-news-stories.png', 'Don\'t Make Me Think', 'Steve Krug')
+          +bookCard('https://facebook.design/public/images/designing-new-ways-to-give-context-to-news-stories.png', 'Don\'t Make Me Think', 'Steve Krug')
+          +bookCard('https://facebook.design/public/images/designing-new-ways-to-give-context-to-news-stories.png', 'Don\'t Make Me Think', 'Steve Krug')
+          +bookCard('https://facebook.design/public/images/designing-new-ways-to-give-context-to-news-stories.png', 'Don\'t Make Me Think', 'Steve Krug')
+          +bookCard('https://facebook.design/public/images/designing-new-ways-to-give-context-to-news-stories.png', 'Don\'t Make Me Think', 'Steve Krug')
+          +suggestCard
+    .row
+      .col.col__12
+        include:markdown-it ../info.md

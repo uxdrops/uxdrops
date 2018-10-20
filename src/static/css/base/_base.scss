@@ -1,0 +1,23 @@
+//---------------------------------------
+// Base: Base
+//---------------------------------------
+
+// Make everything border-box
+// Make 1rem = 10px for easier rem calculations
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+  background: $body-bg;
+}

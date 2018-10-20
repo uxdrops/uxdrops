@@ -1,0 +1,21 @@
+doctype
+html(lang="en")
+  head
+    title {{page.title}}
+    meta(name="description", content="{{page.description}}")
+
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible", content="ie=edge")
+
+    link(rel="apple-touch-icon", href="/static/img/logo.png")
+    link(rel="icon", type="image/png", href="/static/img/logo.png")
+
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    link(rel="stylesheet", href="/static/css/main.css")
+  body
+    include _components/nav
+    | {{content}}
+
+  //- Looking for jQuery? jQuery is included in the main.js file
+  script(src="/static/js/main.js")

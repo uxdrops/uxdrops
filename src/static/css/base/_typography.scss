@@ -1,0 +1,108 @@
+//---------------------------------------
+// Base: Typography
+//---------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700,900');
+
+body {
+	font-size: $base-font-size;
+	font-family: $font-stack;
+	color: $text-color;
+	line-height: $line-height-3;
+}
+
+h1 {
+	font-size: $text-size-alpha;
+	line-height: $line-height-1;
+}
+
+h2 {
+	font-size: $text-size-beta;
+	line-height: $line-height-1;
+}
+
+h3 {
+	font-size: $text-size-gamma;
+	line-height: $line-height-1;
+}
+
+h4 {
+	font-size: $text-size-delta;
+	line-height: $line-height-2;
+}
+
+h5 {
+	font-size: $text-size-epsilon;
+	line-height: $line-height-2;
+}
+
+h6 {
+	font-size: $text-size-zeta;
+	line-height: $line-height-2;
+}
+
+h1, h2, h3 {
+	font-weight: $text-weight-black;
+}
+
+h4, h5, h6 {
+	font-weight: $text-weight-bold;
+}
+
+p {
+	margin-bottom: 1.5rem;
+}
+
+small {
+	font-size: $text-size-zeta;
+}
+
+a {
+	color: $color-primary;
+	&:hover, &:focus {
+		color: darken($color-primary, 15%);
+	}
+}
+
+strong,
+b {
+  font-weight: $text-weight-black;
+}
+
+p.lead {
+	font-size: $base-font-size;
+}
+
+.lead {
+  font-weight: 400;
+}
+
+@include breakpoint(lg) {
+	body {
+		font-size: $text-size-gamma;
+	}
+	h1 {
+		font-size: $text-size-giga;
+	}
+	h2 {
+		font-size: $text-size-alpha;
+	}
+	h3 {
+		font-size: $text-size-beta;
+	}
+	h4 {
+		font-size: $text-size-gamma;
+	}
+	h5 {
+		font-size: $text-size-delta;
+	}
+	h6 {
+		font-size: $text-size-epsilon;
+	}
+	small {
+		font-size: $text-size-delta;
+	}
+	p.lead {
+		font-size: $text-size-beta;
+	}
+}

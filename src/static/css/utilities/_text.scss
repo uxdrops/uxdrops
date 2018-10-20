@@ -1,0 +1,22 @@
+//---------------------------------------
+// Utilities: Text
+//---------------------------------------
+
+.u-t--black { color: $color-black !important;}
+
+.u-t--gray-900 { color: $color-gray-900 !important; }
+.u-t--gray-800 { color: $color-gray-800 !important; }
+.u-t--gray-700 { color: $color-gray-700 !important; }
+.u-t--gray-600 { color: $color-gray-600 !important; }
+.u-t--gray-500 { color: $color-gray-500 !important; }
+.u-t--gray-400 { color: $color-gray-400 !important; }
+.u-t--gray-300 { color: $color-gray-300 !important; }
+.u-t--gray-200 { color: $color-gray-200 !important; }
+.u-t--gray-100 { color: $color-gray-100 !important; }
+
+.u-t--white { color: $color-white !important; }
+.u-t--primary { color: $color-primary !important; }
+
+.u-t--normal { font-weight: 400 !important}
+.u-t--bold { font-weight: 700 !important}
+.u-t--extra-bold { font-weight: 900 !important}
