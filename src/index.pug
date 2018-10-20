@@ -1,6 +1,6 @@
 ---
-title: Curated UX Resources
-description: A collection of [loop here]
+title: UX Drops
+description: A collection of 
 
 layout: base
 ---
@@ -10,7 +10,24 @@ layout: base
     .row
       .col.col__12
         h1 {{page.title}}
-        h2.lead.u-t--gray-500 {{page.description}}
-  .row
-    .col.col__12
-      h3.u-t--primary Books
+        h2.lead.u-t--gray-500 {{page.description}} 
+          a(href="#") tools
+          | , 
+          a(href="#") books
+          | , 
+          a(href="#") webites
+          | , 
+          a(href="#") people
+          | , and 
+          a(href="#") articles
+    .row
+      .col.col__12
+        h3.u-t--primary Books
+        ul.list
+          | {%- assign books = site.books %} 
+          | {%- for item in books %}
+          li.list__item
+            a.list__link.card(href="#" title="{{ item.title }}" target="_blank")
+              strong {{ item.title }} 
+              span {{ item.author }}
+          | {%- endfor %}

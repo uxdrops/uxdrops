@@ -1,3 +1,9 @@
+title: UX Drops
+email: parag.ryan@gmail.com
+description: An organized and frequently updated collection of Design System examples, resources, tools, articles and videos.
+baseurl:
+url: 
+github_username:  ryan-parag
 
 # Where all of your source 
 # pug/HTML/includes/layouts 
@@ -16,3 +22,12 @@ livereload: true
 # directory.
 sass:
     sass_dir: static/css
+collections:
+  tools:
+    output: true
+  articles:
+    output: true
+  books:
+    output: true
+  people:
+    output: true

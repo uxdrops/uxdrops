@@ -1,6 +1,6 @@
 # UX Drops
 ## A curated list of design resources
-#### Built tools: Pug, SCSS, JS, and Jekyll
+#### Built with: Pug, SCSS, JS, and Jekyll
 
 
 ## How To Run
