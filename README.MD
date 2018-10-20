@@ -1,13 +1,7 @@
-<img src="/static/img/favicon.png" width="100"/>
+# UX Drops
+## A curated list of design resources
+#### Built tools: Pug, SCSS, JS, and Jekyll
 
-# J5 -  A Jekyll, Pug, Sass, and Livereload HTML5 Boilerplate
-
-
-## How To Install:
-
-1. Clone this git repository into your project directory.
-2. In your terminal, change into your project directory.
-3. Type the command `bundle install`
 
 ## How To Run
 
@@ -22,7 +16,3 @@ If you include a `_` in front of a filename (ex. `_navBar.sass`), Jekyll will no
 
 - [**Jekyll-Pug by Doug Beney**](https://github.com/DougBeney/jekyll-pug) - This is what allows us to process Pug within Jekyll. Please read the [Github page](https://github.com/DougBeney/jekyll-pug) to understand all the ins-and-outs of this plugin.
 - [**Jekyll-Livereload by Robert DeRose**](https://github.com/RobertDeRose/jekyll-livereload) - Allows browser livereload when running a jekyll server.
-
-## Final Notes
-
-**I hope this helps you increase productivity while coding!**
