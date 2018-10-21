@@ -24,7 +24,7 @@
   }
 }
 
-@include breakpoint(lg) {
+@include breakpoint(md) {
   .list {
     &__item {
       max-width: 24%;
