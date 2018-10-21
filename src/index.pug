@@ -15,11 +15,12 @@ layout: base
           | , 
           a(href="{{ site.baseurl }}/books") books
           | , 
-          a(href="{{ site.baseurl }}/books") webites
+          a(href="{{ site.baseurl }}/websites") websites
           | , 
+          | and 
           a(href="{{ site.baseurl }}/people") people
-          | , and 
-          a(href="{{ site.baseurl }}/books") articles
+          //| , and 
+          //a(href="{{ site.baseurl }}/books") articles
     .row
       .col.col__12
         h3.u-t--primary Tools
@@ -36,7 +37,7 @@ layout: base
           li.list__item
             a.list__link.card.card--cta(href="{{ site.baseurl }}/tools")
               .card__body
-                img.card__img(src="static/img/tools.svg" width="100%") 
+                img.card__img(src="/static/img/tools.svg" width="100%") 
                 .card__title Latest UX Tools
               .card__footer
                 .card__text View the whole list
@@ -57,7 +58,7 @@ layout: base
           li.list__item
             a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
               .card__body
-                img.card__img(src="static/img/books.svg" width="100%") 
+                img.card__img(src="/static/img/books.svg" width="100%") 
                 .card__title Latest UX Books
               .card__footer
                 .card__text View the whole list
@@ -65,21 +66,21 @@ layout: base
       .col.col__12
         h3.u-t--primary Websites
         ul.list
-          | {%- assign books = site.books | sort: 'date' | reverse %} 
-          | {%- for item in books limit:3 %}
+          | {%- assign websites = site.websites | sort: 'date' | reverse %} 
+          | {%- for item in websites limit:3 %}
           li.list__item
             a.list__link.card(href="{{ item.link }}" target="_blank")
               .card__body
                 img.card__img(src="{{ item.image }}" width="100%")
                 .card__title {{item.title}}
               .card__footer
-                .card__text by {{item.author}}
+                .card__text {{ item.date | date: "%B %-d %Y" }}
           | {%- endfor %}
           li.list__item
             a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
               .card__body
-                img.card__img(src="static/img/websites.svg" width="100%") 
-                .card__title Latest UX Books
+                img.card__img(src="/static/img/websites.svg" width="100%") 
+                .card__title Latest UX Websites
               .card__footer
                 .card__text View the whole list
     .row
@@ -99,11 +100,11 @@ layout: base
           li.list__item
             a.list__link.card.card--cta(href="{{ site.baseurl }}/people")
               .card__body
-                img.card__img(src="static/img/people.svg" width="100%") 
+                img.card__img(src="/static/img/people.svg" width="100%") 
                 .card__title Latest People in UX
               .card__footer
                 .card__text View the whole list
-    .row
+    //.row
       .col.col__12
         h3.u-t--primary Articles
         ul.list
@@ -120,7 +121,7 @@ layout: base
           li.list__item
             a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
               .card__body
-                img.card__img(src="static/img/articles.svg" width="100%") 
+                img.card__img(src="/static/img/articles.svg" width="100%") 
                 .card__title Latest UX Articles
               .card__footer
                 .card__text View the whole list

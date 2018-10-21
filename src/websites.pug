@@ -1,0 +1,26 @@
+---
+title: Websites
+description: A list of good books about building great user experiences and the issues related to the field.
+
+layout: base
+---
+
+.content
+  .container
+    .row
+      .col.col__12
+        h1 {{page.title}}
+        p.lead.u-t--gray-500 {{page.description}}
+    .row
+      .col.col__12
+        ul.list
+          | {%- assign websites = site.websites | sort: 'date' | reverse %} 
+          | {%- for item in websites %}
+          li.list__item
+            a.list__link.card(href="{{ item.link }}" target="_blank")
+              .card__body
+                img.card__img(src="{{ item.image }}" width="100%")
+                .card__title {{item.title}}
+              .card__footer
+                .card__text {{ item.date | date: "%B %-d %Y" }}
+          | {%- endfor %}

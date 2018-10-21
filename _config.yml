@@ -31,3 +31,5 @@ collections:
     output: true
   people:
     output: true
+  websites:
+    output: true
