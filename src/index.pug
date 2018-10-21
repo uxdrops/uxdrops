@@ -1,5 +1,5 @@
 ---
-title: UX Drops
+title: Curated UX Resources
 description: A collection of 
 
 layout: base
@@ -11,23 +11,117 @@ layout: base
       .col.col__12
         h1 {{page.title}}
         h2.lead.u-t--gray-500 {{page.description}} 
-          a(href="#") tools
+          a(href="{{ site.baseurl }}/books") tools
           | , 
-          a(href="#") books
+          a(href="{{ site.baseurl }}/books") books
           | , 
-          a(href="#") webites
+          a(href="{{ site.baseurl }}/books") webites
           | , 
-          a(href="#") people
+          a(href="{{ site.baseurl }}/books") people
           | , and 
-          a(href="#") articles
+          a(href="{{ site.baseurl }}/books") articles
+    .row
+      .col.col__12
+        h3.u-t--primary Tools
+        ul.list
+          | {%- assign books = site.books | sort: 'date' | reverse %} 
+          | {%- for item in books limit:3 %}
+          li.list__item
+            a.list__link.card(href="{{ item.link }}" target="_blank")
+              .card__body
+                img.card__img(src="{{ item.image }}" width="100%")
+                .card__title {{item.title}}
+              .card__footer
+                .card__text by {{item.author}}
+          | {%- endfor %}
+          li.list__item
+            a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
+              .card__body
+                img.card__img(src="https://via.placeholder.com/500x500" width="100%") 
+                .card__title Latest UX Books
+              .card__footer
+                .card__text View the whole list
     .row
       .col.col__12
         h3.u-t--primary Books
         ul.list
-          | {%- assign books = site.books %} 
-          | {%- for item in books %}
+          | {%- assign books = site.books | sort: 'date' | reverse %} 
+          | {%- for item in books limit:3 %}
           li.list__item
-            a.list__link.card(href="#" title="{{ item.title }}" target="_blank")
-              strong {{ item.title }} 
-              span {{ item.author }}
+            a.list__link.card(href="{{ item.link }}" target="_blank")
+              .card__body
+                img.card__img(src="{{ item.image }}" width="100%")
+                .card__title {{item.title}}
+              .card__footer
+                .card__text by {{item.author}}
           | {%- endfor %}
+          li.list__item
+            a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
+              .card__body
+                img.card__img(src="https://via.placeholder.com/500x500" width="100%") 
+                .card__title Latest UX Books
+              .card__footer
+                .card__text View the whole list
+    .row
+      .col.col__12
+        h3.u-t--primary Websites
+        ul.list
+          | {%- assign books = site.books | sort: 'date' | reverse %} 
+          | {%- for item in books limit:3 %}
+          li.list__item
+            a.list__link.card(href="{{ item.link }}" target="_blank")
+              .card__body
+                img.card__img(src="{{ item.image }}" width="100%")
+                .card__title {{item.title}}
+              .card__footer
+                .card__text by {{item.author}}
+          | {%- endfor %}
+          li.list__item
+            a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
+              .card__body
+                img.card__img(src="https://via.placeholder.com/500x500" width="100%") 
+                .card__title Latest UX Books
+              .card__footer
+                .card__text View the whole list
+    .row
+      .col.col__12
+        h3.u-t--primary People
+        ul.list
+          | {%- assign books = site.books | sort: 'date' | reverse %} 
+          | {%- for item in books limit:3 %}
+          li.list__item
+            a.list__link.card(href="{{ item.link }}" target="_blank")
+              .card__body
+                img.card__img(src="{{ item.image }}" width="100%")
+                .card__title {{item.title}}
+              .card__footer
+                .card__text by {{item.author}}
+          | {%- endfor %}
+          li.list__item
+            a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
+              .card__body
+                img.card__img(src="https://via.placeholder.com/500x500" width="100%") 
+                .card__title Latest UX Books
+              .card__footer
+                .card__text View the whole list
+    .row
+      .col.col__12
+        h3.u-t--primary Articles
+        ul.list
+          | {%- assign books = site.books | sort: 'date' | reverse %} 
+          | {%- for item in books limit:3 %}
+          li.list__item
+            a.list__link.card(href="{{ item.link }}" target="_blank")
+              .card__body
+                img.card__img(src="{{ item.image }}" width="100%")
+                .card__title {{item.title}}
+              .card__footer
+                .card__text by {{item.author}}
+          | {%- endfor %}
+          li.list__item
+            a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
+              .card__body
+                img.card__img(src="https://via.placeholder.com/500x500" width="100%") 
+                .card__title Latest UX Books
+              .card__footer
+                .card__text View the whole list

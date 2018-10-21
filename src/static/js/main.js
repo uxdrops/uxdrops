@@ -1,9 +1,16 @@
 ---
 ---
 
-/*
-	Tip: You can use Jekyll's include or include_relative
-	tag to include Javascript files.
-*/
+var openNav = document.getElementById('openNav');
+var mobileNav = document.getElementById('mobileNav');
+var closeNav = document.getElementById('closeNav');
 
-// Enter your JS code here.
+openNav.addEventListener("click", function() {
+  mobileNav.classList.add('mobile-nav--is-open');
+  console.log('sup fool');
+}, false);
+
+closeNav.addEventListener("click", function() {
+  mobileNav.classList.remove('mobile-nav--is-open');
+  console.log('sup fool');
+}, false);
