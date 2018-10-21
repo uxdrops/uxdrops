@@ -1,0 +1,19 @@
+//---------------------------------------
+// Components: Copyright
+//---------------------------------------
+
+.copyright {
+  display: flex;
+  align-items: center;
+  &__img {
+    $size: 100px;
+    width: $size;
+    height: $size;
+    margin-right: 1rem;
+    opacity: .5;
+  }
+  &__text {
+    display:block;
+    font-size: $text-size-epsilon;
+  }
+}

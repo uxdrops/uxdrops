@@ -11,34 +11,33 @@ layout: base
       .col.col__12
         h1 {{page.title}}
         h2.lead.u-t--gray-500 {{page.description}} 
-          a(href="{{ site.baseurl }}/books") tools
+          a(href="{{ site.baseurl }}/tools") tools
           | , 
           a(href="{{ site.baseurl }}/books") books
           | , 
           a(href="{{ site.baseurl }}/books") webites
           | , 
-          a(href="{{ site.baseurl }}/books") people
+          a(href="{{ site.baseurl }}/people") people
           | , and 
           a(href="{{ site.baseurl }}/books") articles
     .row
       .col.col__12
         h3.u-t--primary Tools
         ul.list
-          | {%- assign books = site.books | sort: 'date' | reverse %} 
-          | {%- for item in books limit:3 %}
+          | {%- assign tools = site.tools | sort: 'date' | reverse %} 
+          | {%- for item in tools limit:3 %}
           li.list__item
             a.list__link.card(href="{{ item.link }}" target="_blank")
               .card__body
                 img.card__img(src="{{ item.image }}" width="100%")
-                .card__title {{item.title}}
               .card__footer
-                .card__text by {{item.author}}
+                .card__title {{item.title}}
           | {%- endfor %}
           li.list__item
-            a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
+            a.list__link.card.card--cta(href="{{ site.baseurl }}/tools")
               .card__body
-                img.card__img(src="https://via.placeholder.com/500x500" width="100%") 
-                .card__title Latest UX Books
+                img.card__img(src="/static/img/tools.svg" width="100%") 
+                .card__title Latest UX Tools
               .card__footer
                 .card__text View the whole list
     .row
@@ -58,7 +57,7 @@ layout: base
           li.list__item
             a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
               .card__body
-                img.card__img(src="https://via.placeholder.com/500x500" width="100%") 
+                img.card__img(src="/static/img/tools.svg" width="100%") 
                 .card__title Latest UX Books
               .card__footer
                 .card__text View the whole list
@@ -79,7 +78,7 @@ layout: base
           li.list__item
             a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
               .card__body
-                img.card__img(src="https://via.placeholder.com/500x500" width="100%") 
+                img.card__img(src="/static/img/websites.svg" width="100%") 
                 .card__title Latest UX Books
               .card__footer
                 .card__text View the whole list
@@ -87,21 +86,21 @@ layout: base
       .col.col__12
         h3.u-t--primary People
         ul.list
-          | {%- assign books = site.books | sort: 'date' | reverse %} 
-          | {%- for item in books limit:3 %}
+          | {%- assign people = site.people | sort: 'date' | reverse %} 
+          | {%- for item in people limit:3 %}
           li.list__item
             a.list__link.card(href="{{ item.link }}" target="_blank")
               .card__body
                 img.card__img(src="{{ item.image }}" width="100%")
                 .card__title {{item.title}}
               .card__footer
-                .card__text by {{item.author}}
+                .card__text {{ item.date | date: "%B %-d %Y" }}
           | {%- endfor %}
           li.list__item
-            a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
+            a.list__link.card.card--cta(href="{{ site.baseurl }}/people")
               .card__body
-                img.card__img(src="https://via.placeholder.com/500x500" width="100%") 
-                .card__title Latest UX Books
+                img.card__img(src="/static/img/people.svg" width="100%") 
+                .card__title Latest People in UX
               .card__footer
                 .card__text View the whole list
     .row
@@ -121,7 +120,7 @@ layout: base
           li.list__item
             a.list__link.card.card--cta(href="{{ site.baseurl }}/books")
               .card__body
-                img.card__img(src="https://via.placeholder.com/500x500" width="100%") 
-                .card__title Latest UX Books
+                img.card__img(src="/static/img/articles.svg" width="100%") 
+                .card__title Latest UX Articles
               .card__footer
                 .card__text View the whole list

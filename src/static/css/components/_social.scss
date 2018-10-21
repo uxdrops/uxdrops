@@ -1,0 +1,22 @@
+//---------------------------------------
+// Components: Social
+//---------------------------------------
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem 0;
+  &__icon {
+    $size: 30px;
+    width: $size;
+    height:$size;
+    opacity:.7;
+    &:hover, &:focus {
+      opacity: 1;
+    }
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+}

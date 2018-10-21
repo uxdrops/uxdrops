@@ -1,0 +1,26 @@
+---
+title: People
+description: A list of a few awesome people who regularly speak about UX.
+
+layout: base
+---
+
+.content
+  .container
+    .row
+      .col.col__12
+        h1 {{page.title}}
+        p.lead.u-t--gray-500 {{page.description}}
+    .row
+      .col.col__12
+        ul.list
+          | {%- assign people = site.people | sort: 'date' | reverse %} 
+          | {%- for item in people %}
+          li.list__item
+            a.list__link.card(href="{{ item.link }}" target="_blank")
+              .card__body
+                img.card__img(src="{{ item.image }}" width="100%")
+                .card__title {{item.title}}
+              .card__footer
+                .card__text {{ item.date | date: "%B %-d %Y" }}
+          | {%- endfor %}

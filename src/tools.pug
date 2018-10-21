@@ -1,0 +1,25 @@
+---
+title: Tools
+description: A list of good tools that help build great user experiences.
+
+layout: base
+---
+
+.content
+  .container
+    .row
+      .col.col__12
+        h1 {{page.title}}
+        p.lead.u-t--gray-500 {{page.description}}
+    .row
+      .col.col__12
+        ul.list
+          | {%- assign books = site.tools | sort: 'date' | reverse %} 
+          | {%- for item in books %}
+          li.list__item
+            a.list__link.card(href="{{ item.link }}" target="_blank")
+              .card__body
+                img.card__img(src="{{ item.image }}" width="100%")
+              .card__footer
+                .card__title {{item.title}}
+          | {%- endfor %}
