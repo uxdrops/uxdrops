@@ -21,7 +21,7 @@ livereload: true
 # Setting our sass 
 # directory.
 sass:
-    sass_dir: static/css
+    sass_dir: /static/css
 collections:
   tools:
     output: true
